@@ -1,24 +1,28 @@
-#Clean Blog by Start Bootstrap - Jekyll Version
+New Age Jekyll theme
+=========================
 
-The official Jekyll version of the Clean Blog theme by [Start Bootstrap](http://startbootstrap.com/).
+Jekyll theme based on [New Age bootstrap theme ](https://startbootstrap.com/template-overviews/new-age/)
 
-###[View Live Demo &rarr;](http://blackrockdigital.github.io/startbootstrap-clean-blog-jekyll/)
+# Demo
+View this jekyll theme in action [here](https://jekynewage.github.io/)
 
-## Before You Begin
+## Built by
+[Antonio Trento](https://it.linkedin.com/in/antoniotrento)
 
-In the _config.yml file, the base URL is set to /startbootstrap-clean-blog-jekyll which is this themes gh-pages preview. It's recommended that you remove the base URL before working with this theme locally!
+This Jekyll template was created to develop, landing pages, squeeze pages, portfolio and blog or all the above.
 
-It should look like this:
-`baseurl: ""`
+###I integrated analytical tools and marketing such as:
+- Google analytics
+- Disqus comment system
+- Add This social sharing
 
-## What's Included
+>>External stylesheets and libraries included are Google Fonts, Font Awesome, Normalize.CSS, and WOW.js
 
-A full Jekyll environment is included with this theme. If you have Jekyll installed, simply run `jekyll serve` in your command line and preview the build in your browser. You can use `jekyll serve --watch` to watch for changes in the source files as well.
+In order to set your log data to applications _config.yml just open the file and find the associated items.
 
-A Grunt environment is also included. There are a number of tasks it performs like minification of the JavaScript, compiling of the LESS files, adding banners to apply the MIT license, and watching for changes. Run the grunt default task by entering `grunt` into your command line which will build the files. You can use `grunt watch` if you are working on the JavaScript or the LESS.
+I also built a system to add their own names on the same company files
 
-You can run `jekyll serve --watch` and `grunt watch` at the same time to watch for changes and then build them all at once.
+**To change the base colors yellow go in css folder there main.css where you can set the primary color and the secondary color, remember that the theme is gradient in the background areas**
 
-## Support
-
-Visit Clean Blog's template overview page on Start Bootstrap at http://startbootstrap.com/template-overviews/clean-blog/ and leave a comment, email feedback@startbootstrap.com, or open an issue here on GitHub for support.
+=========
+For more details, read the [documentation](http://jekyllrb.com/)
