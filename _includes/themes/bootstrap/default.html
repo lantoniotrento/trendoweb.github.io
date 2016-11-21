@@ -23,12 +23,7 @@
   </head>
 
   <body>
-
-
       {{ content }}
-
-
-      <hr>
       <section class="relateds">
         <p>
           &copy; {{ site.time | date: '%Y' }} {{ site.author.name }}
@@ -39,15 +34,10 @@
         </p>
 				<div><a href="{{ BASE_PATH }}/effects/"><h3>Other samples</h3></a></div>
 			</section>
-
-
     {% include JB/analytics %}
-
     <script src="{{ BASE_PATH }}/assets/js/jquery/jquery-2.2.0.min.js"></script>
     <script src="{{ BASE_PATH }}/assets/js/bootstrap/bootstrap.min.js"></script>
     <script src="{{ BASE_PATH }}/assets/js/custom/npm.js"></script>
     <script src="{{ BASE_PATH }}/assets/js/custom/custom.js"></script>
-
-
   </body>
 </html>
