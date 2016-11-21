@@ -148,7 +148,7 @@ body {
 }
 
 .wide-mobile img {
-  width:100%;
+  width:100%; 
 }
     .wide {
       display: none;
