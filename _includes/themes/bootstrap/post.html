@@ -3,10 +3,6 @@
 <p style="margin-bottom: 2em;">By <strong>{% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %}</strong> &#8212; {% unless page.categories == empty %}Posted in <strong>
 {{page.categories | array_to_sentence_string}}
 </strong>{% endunless %} on <strong>{{ page.date | date_to_long_string }}</strong></p>
-</div>
-
-</header>
-<button class="trigger" data-info="Click or scroll down"><span>Trigger</span></button>
 
 
 

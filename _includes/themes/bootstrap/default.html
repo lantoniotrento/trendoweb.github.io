@@ -29,35 +29,8 @@
 
   </head>
 
-  <body class="demo-6">
+  <body>
 
-    <div id="container2" class="container2 intro-effect-grid">
-      <!-- Top Navigation -->
-      <div class="codrops-top clearfix">
-        <a class="codrops-icon codrops-icon-prev" href="{{ BASE_PATH }}"><span>Home</span></a>
-        <span class="right"><a class="codrops-icon codrops-icon-drop" href="{{ BASE_PATH }}/archive"><span>Archive</span></a></span>
-      </div>
-      <header class="header">
-        <ul class="grid">
-          <li onclick="location.href='{{ BASE_PATH }}';" class="{% if page.title != 'JekyMat' %}notrans{% endif %}"><h2 class="{% if page.title == 'JekyMat' %}current-demo{% endif %}">Home</h2></li>
-          <li onclick="location.href='{{ BASE_PATH }}/blog';" class="{% if page.title != 'Blog' %}notrans{% endif %}"><h2 class="{% if page.title == 'Blog' %}current-demo{% endif %}">Blog</h2></li>
-          <li onclick="location.href='{{ BASE_PATH }}/effects/';" class="{% if page.title != 'Landing' %}notrans{% endif %}"><h2 class="{% if page.title == 'Landing' %}current-demo{% endif %}">Landing Samples</h2></li>
-          <li onclick="location.href='{{ BASE_PATH }}/pages';" class="{% if page.title != 'Pages' %}notrans{% endif %}"><h2 class="{% if page.title == 'Pages' %}current-demo{% endif %}">Pages</h2></li>
-          <li onclick="location.href='{{ BASE_PATH }}/tags';" class="{% if page.title != 'Tags' %}notrans{% endif %}"><h2 class="{% if page.title == 'Tags' %}current-demo{% endif %}">Tags</h2></li>
-          <li onclick="location.href='{{ BASE_PATH }}/categories';" class="{% if page.title != 'Categories' %}notrans{% endif %}"><h2 class="{% if page.title == 'Categories' %}current-demo{% endif %}">Categories</h2></li>
-        </ul>
-        <div class="bg-img"><img src="{{ site.baseurl }}/assets/img/{% if page.img %}{{ page.img }}{% else %}8.jpg{% endif %}" alt="Background Image"/></div>
-        <div class="bg-img-mobile"><img src="{{ site.baseurl }}/assets/img/{% if page.img-mobile %}{{ page.img-mobile }}{% else %}8-mobile.jpg{% endif %}" alt="Background Image"/></div>
-        <div class="title">
-          <nav class="codrops-demos">
-            <a class="{% if page.title == 'JekyMat' %}current-demo{% endif %}" href="{{ BASE_PATH }}">Home</a>
-            <a class="{% if page.title == 'Blog' %}current-demo{% endif %}" href="{{ BASE_PATH }}/blog">Blog</a>
-            <a class="{% if page.title == 'Landing' %}current-demo{% endif %}" href="{{ BASE_PATH }}/effects/">Landing</a>
-            <a class="{% if page.title == 'Pages' %}current-demo{% endif %}" href="{{ BASE_PATH }}/pages">Pages</a>
-            <a class="{% if page.title == 'Tags' %}current-demo{% endif %}" href="{{ BASE_PATH }}/tags">Tags</a>
-            <a class="{% if page.title == 'Categories' %}current-demo{% endif %}" href="{{ BASE_PATH }}/categories">Categories</a>
-            <a class="{% if page.title == 'Archive' %}current-demo{% endif %}" href="{{ BASE_PATH }}/archive">Archive</a>
-          </nav>
 
       {{ content }}
 
@@ -73,186 +46,15 @@
         </p>
 				<div><a href="{{ BASE_PATH }}/effects/"><h3>Other samples</h3></a></div>
 			</section>
-		</div><!-- /container2 -->
-
-
+	
 
     {% include JB/analytics %}
-
-
-<!-- Start of Async Drift Code -->
-<script>
-!function() {
-  var t;
-  if (t = window.driftt = window.drift = window.driftt || [], !t.init) return t.invoked ? void (window.console && console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0,
-  t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
-  t.factory = function(e) {
-    return function() {
-      var n;
-      return n = Array.prototype.slice.call(arguments), n.unshift(e), t.push(n), t;
-    };
-  }, t.methods.forEach(function(e) {
-    t[e] = t.factory(e);
-  }), t.load = function(t) {
-    var e, n, o, i;
-    e = 3e5, i = Math.ceil(new Date() / e) * e, o = document.createElement("script"),
-    o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + i + "/" + t + ".js",
-    n = document.getElementsByTagName("script")[0], n.parentNode.insertBefore(o, n);
-  });
-}();
-drift.SNIPPET_VERSION = '0.3.1';
-drift.load('4h8ah4t4m4ut');
-</script>
-<!-- End of Async Drift Code -->
-
 
     <script src="{{ ASSET_PATH }}/resources/jquery/jquery-2.2.0.min.js"></script>
     <script src="{{ BASE_PATH }}/assets/js/bootstrap/bootstrap.min.js"></script>
 
     <script src="{{ BASE_PATH }}/assets/js/classie.js"></script>
     <script src="{{ BASE_PATH }}/assets/js/ripple-config.js"></script>
-		<script>
-			(function() {
-
-				// detect if IE : from http://stackoverflow.com/a/16657946
-				var ie = (function(){
-					var undef,rv = -1; // Return value assumes failure.
-					var ua = window.navigator.userAgent;
-					var msie = ua.indexOf('MSIE ');
-					var trident = ua.indexOf('Trident/');
-
-					if (msie > 0) {
-						// IE 10 or older => return version number
-						rv = parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
-					} else if (trident > 0) {
-						// IE 11 (or newer) => return version number
-						var rvNum = ua.indexOf('rv:');
-						rv = parseInt(ua.substring(rvNum + 3, ua.indexOf('.', rvNum)), 10);
-					}
-
-					return ((rv > -1) ? rv : undef);
-				}());
-
-
-				// disable/enable scroll (mousewheel and keys) from http://stackoverflow.com/a/4770179
-				// left: 37, up: 38, right: 39, down: 40,
-				// spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
-				var keys = [32, 37, 38, 39, 40], wheelIter = 0;
-
-				function preventDefault(e) {
-					e = e || window.event;
-					if (e.preventDefault)
-					e.preventDefault();
-					e.returnValue = false;
-				}
-
-				function keydown(e) {
-					for (var i = keys.length; i--;) {
-						if (e.keyCode === keys[i]) {
-							preventDefault(e);
-							return;
-						}
-					}
-				}
-
-				function touchmove(e) {
-					preventDefault(e);
-				}
-
-				function wheel(e) {
-					// for IE
-					//if( ie ) {
-						//preventDefault(e);
-					//}
-				}
-
-				function disable_scroll() {
-					window.onmousewheel = document.onmousewheel = wheel;
-					document.onkeydown = keydown;
-					document.body.ontouchmove = touchmove;
-				}
-
-				function enable_scroll() {
-					window.onmousewheel = document.onmousewheel = document.onkeydown = document.body.ontouchmove = null;
-				}
-
-				var docElem = window.document.documentElement,
-					scrollVal,
-					isRevealed,
-					noscroll,
-					isAnimating,
-					container2 = document.getElementById( 'container2' ),
-					trigger = container2.querySelector( 'button.trigger' );
-
-				function scrollY() {
-					return window.pageYOffset || docElem.scrollTop;
-				}
-
-				function scrollPage() {
-					scrollVal = scrollY();
-
-					if( noscroll && !ie ) {
-						if( scrollVal < 0 ) return false;
-						// keep it that way
-						window.scrollTo( 0, 0 );
-					}
-
-					if( classie.has( container2, 'notrans' ) ) {
-						classie.remove( container2, 'notrans' );
-						return false;
-					}
-
-					if( isAnimating ) {
-						return false;
-					}
-
-					if( scrollVal <= 0 && isRevealed ) {
-						toggle(0);
-					}
-					else if( scrollVal > 0 && !isRevealed ){
-						toggle(1);
-					}
-				}
-
-				function toggle( reveal ) {
-					isAnimating = true;
-
-					if( reveal ) {
-						classie.add( container2, 'modify' );
-					}
-					else {
-						noscroll = true;
-						disable_scroll();
-						classie.remove( container2, 'modify' );
-					}
-
-					// simulating the end of the transition:
-					setTimeout( function() {
-						isRevealed = !isRevealed;
-						isAnimating = false;
-						if( reveal ) {
-							noscroll = false;
-							enable_scroll();
-						}
-					}, 1000 );
-				}
-
-				// refreshing the page...
-				var pageScroll = scrollY();
-				noscroll = pageScroll === 0;
-
-				disable_scroll();
-
-				if( pageScroll ) {
-					isRevealed = true;
-					classie.add( container2, 'notrans' );
-					classie.add( container2, 'modify' );
-				}
-
-				window.addEventListener( 'scroll', scrollPage );
-				trigger.addEventListener( 'click', function() { toggle( 'reveal' ); } );
-			})();
-		</script>
 
   </body>
 </html>
