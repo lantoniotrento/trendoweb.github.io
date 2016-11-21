@@ -1,4 +1,10 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway:400,700");/*!
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('../assets/fonts/glyphicons/glyphicons-halflings-regular.eot');
+    src: url('../assets/fonts/glyphicons/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+/*!
  * bootswatch v3.3.7
  * Homepage: http://bootswatch.com
  * Copyright 2012-2016 Thomas Park
