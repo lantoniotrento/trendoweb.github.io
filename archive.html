@@ -1,0 +1,13 @@
+---
+layout: page
+title : Archive
+header : Post Archive
+tagline: "How to test your Jekyll site locally"
+group: navigation
+img : 7.jpg
+img-mobile : 7-mobile.jpg
+---
+{% include JB/setup %}
+<div style="margin-top: 2em;" class="container">
+{% assign posts_collate = site.posts %}
+{% include JB/posts_collate %}

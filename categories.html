@@ -1,0 +1,23 @@
+---
+layout: page
+title: Categories
+header: Posts By Category
+group: navigation
+img : 6.jpg
+img-mobile : 6-mobile.jpg
+---
+{% include JB/setup %}
+<div style="margin-top: 2em;" class="container">
+<ul class="nav nav-pills">
+  {% assign categories_list = site.categories %}
+  {% include JB/categories_list %}
+</ul>
+
+
+{% for category in site.categories %}
+  <h2 id="{{ category[0] }}-ref">{{ category[0] | join: "/" }}</h2>
+  <ul>
+    {% assign pages_list = category[1] %}
+    {% include JB/pages_list %}
+  </ul>
+{% endfor %}

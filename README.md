@@ -1,28 +1,55 @@
-New Age Jekyll theme
-=========================
+Jekyll Material Design 
+======================
 
-Jekyll theme based on [New Age bootstrap theme ](https://startbootstrap.com/template-overviews/new-age/)
+Publish your static website/blog on GitHub Pages using [Jekyll](https://jekyllrb.com/) and [Bootstrap 3](https://github.com/twbs/bootstrap) with a *"materialized"* style.
 
-# Demo
-View this jekyll theme in action [here](https://jekynewage.github.io/)
+This project is based on [Jekyll-Bootrap-3](https://github.com/dbtek/jekyll-bootstrap-3). It also includes the [Paper theme](http://bootswatch.com/paper) from [Bootswatch.com](http://bootswatch.com).
 
-## Built by
-[Antonio Trento](https://it.linkedin.com/in/antoniotrento)
+![Jekyll-material-design Thumbnail](https://github.com/sentenza/jekyll-material-design/blob/master/assets/images/jekyll-bootstrap.png "Jekyll material design default theme")
 
-This Jekyll template was created to develop, landing pages, squeeze pages, portfolio and blog or all the above.
 
-###I integrated analytical tools and marketing such as:
-- Google analytics
-- Disqus comment system
-- Add This social sharing
+#### How it works
 
->>External stylesheets and libraries included are Google Fonts, Font Awesome, Normalize.CSS, and WOW.js
+ - [Jekyll intro](http://sentenza.github.io/jekyll-material-design/lessons/2014/02/10/jekyll-intro)
+ - [How to test your new website locally](http://sentenza.github.io/lessons/2016/01/17/testing-locally/)
+ - [Build a blog with Jekyll](https://www.smashingmagazine.com/2014/08/build-blog-jekyll-github-pages/)
+ - [It's Called Jekyll, and It Works](https://developmentseed.org/blog/2013/10/24/its-called-jekyll/)
+ - [Syntax Highlight Example](http://sentenza.github.io/jekyll-material-design/lessons/2014/02/13/syntax-highlight-example)
 
-In order to set your log data to applications _config.yml just open the file and find the associated items.
+## Usage
 
-I also built a system to add their own names on the same company files
+### 1. Create a Repo
+- Go to <https://github.com> and create a new repository named *USERNAME.github.io*  
 
-**To change the base colors yellow go in css folder there main.css where you can set the primary color and the secondary color, remember that the theme is gradient in the background areas**
+### 2. Install Jekyll-Bootstrap-3  
+<pre>
+  <code>
+    $ git clone https://github.com/sentenza/jekyll-material-design USERNAME.github.io
+    $ cd USERNAME.github.io
+    $ git remote set-url origin git@github.com:USERNAME/USERNAME.github.io.git
+    $ git push origin master  
+  </code>
+</pre> 
 
-=========
-For more details, read the [documentation](http://jekyllrb.com/)
+### 3. Edit your website configuration
+
+Edit `_includes/themes/bootstrap/` to change information about your new website and also to remove the GitHub red ribbon ([default.html#26](https://github.com/sentenza/jekyll-material-design/blob/master/_includes/themes/bootstrap/default.html#L26)).
+
+Please, take a look at [Jekyll intro](http://sentenza.github.io/jekyll-material-design/lessons/2014/02/10/jekyll-intro) to understand how GitHub and Jekyll work together to serve your pages.
+
+### 4. Enjoy !
+- After giving 10 mins to GitHub of course.  
+
+For original project's usage and documentation please see the [Wiki of this project](https://github.com/sentenza/jekyll-material-design/wiki).
+
+## Demo
+
+Visit [jekyll-material-design](https://sentenza.github.io/jekyll-material-design) on GitHub Pages
+
+## Further resources
+
+- [Prose.io](http://prose.io/#about), *a web-based content editor specifically designed to make it simple for content creators to publish to Jekyll*
+
+## License
+
+[MIT](http://opensource.org/licenses/MIT)

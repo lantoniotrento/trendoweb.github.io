@@ -1,15 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
-{% include head.html %}
-
-<body id="page-top">
-  {% include nav-blog.html %}
-
-  {{ content }}
-
-  {% include contact.html %}
-  {% include scripts.html %}
-</body>
-
-</html>
+---
+theme :
+  name : bootstrap
+---
+{% include JB/setup %}
+{% include themes/bootstrap/default.html %}
