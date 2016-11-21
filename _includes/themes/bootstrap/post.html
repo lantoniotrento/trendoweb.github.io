@@ -11,9 +11,9 @@
 </div>
 
 <div class="container">
-<h2 style="margin-bottom: 2em;">By <strong>{% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %}</strong> &#8212; {% unless page.categories == empty %}Posted in <strong>
+<p style="font-size: 3em; margin-bottom: 2em;">By <strong>{% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %}</strong> &#8212; {% unless page.categories == empty %}Posted in <strong>
 {{page.categories | array_to_sentence_string}}
-</strong>{% endunless %} on <strong>{{ page.date | date_to_long_string }}</strong></h2>
+</strong>{% endunless %} on <strong>{{ page.date | date_to_long_string }}</strong></p>
 
 
 
