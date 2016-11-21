@@ -107,7 +107,7 @@
 /* fullscreen image header Extra markup and styles for table-esque vertical and horizontal centering */
 
 .body {
-  height: 100%;
+  
   background-color: #333;
   background-size:100% auto;
   background-repeat: no-repeat !important;
