@@ -1,24 +1,4 @@
 
-<div class="wide" style="background-image:url('{{ BASE_PATH }}/assets/img/{% if page.img %}carousel_blue.png{% else %}generic.jpg{% endif %}')">
-  <div class="row">
-    <div class="col-lg-12">
-      <div class="page-headers-small relateds">
-        <h2 id="navs" style="color:white">{{ page.title }}{% if page.tagline %} <br><small class="subtitle">{{ page.tagline }}</small>{% endif %}</h2>
-
-      </div>
-    </div>
-  </div>
-</div>
-<div class="wide-mobile" style="background-image:url('{{ BASE_PATH }}/assets/img/{% if page.img-mobile %}{{ page.img-mobile }}{% else %}generic.jpg{% endif %}')">
-  <div class="row">
-    <div class="col-lg-12">
-      <div class="page-headers-small relateds">
-        <h2 id="navs" style="color:white">{{ page.title }}{% if page.tagline %} <br><small class="subtitle">{{ page.tagline }}</small>{% endif %}</h2>
-
-      </div>
-    </div>
-  </div>
-</div>
 <div class="container">
 
   <section class="relateds">
@@ -56,6 +36,25 @@
       </ul>
     {% endunless %}
 
+</div>
+<hr>
+  <div class="container-fluid">
+    <div class="row">
+      <div onclick="location.href='{% if page.previous.url %}{{ BASE_PATH }}{{ page.previous.url }}{% else %}#{% endif %}';" style="text-align: center; vertical-align: middle; line-height: 350px; background-image:url('{{ BASE_PATH }}/assets/img/{% if page.previous.img %}{{ page.previous.img }}{% else %}no-post.jpg{% endif %}'); background-repeat:no-repeat; background-size:100% auto; height:350px; max-width: 100%;" class="col-md-6">
+        {% if page.previous %}
+          <h3><a style="margin: 0 auto;" class="link link--mallki" href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; {{ page.previous.title }}<span data-letters="&larr; {{ page.previous.title }}"></span><span data-letters="&larr; {{ page.previous.title }}"></span></a></h3>
+        {% else %}
+          <h3><a style="margin: 0 auto;" class="disabled link link--mallki" href="#" title="No more old posts">&larr; No more old posts<span data-letters="&larr; No more old posts"></span><span data-letters="&larr; No more old posts"></span></a></h3>
+        {% endif %}
+      </div>
+      <div onclick="location.href='{% if page.next.url %}{{ BASE_PATH }}{{ page.next.url }}{% else %}#{% endif %}';" style="text-align: center; vertical-align: middle; line-height: 350px; background-image:url('{{ BASE_PATH }}/assets/img/{% if page.next.img %}{{ page.next.img }}{% else %}no-post.jpg{% endif %}'); background-repeat:no-repeat; background-size:100% auto; height:350px; max-width: 100%;" class="col-md-6">
+        {% if page.next %}
+          <h3><a style="margin: 0 auto;" class="link link--mallki" href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">{{ page.next.title }} &rarr;<span data-letters="{{ page.next.title }} &rarr;"></span><span data-letters="{{ page.next.title }} &rarr;"></span></a></h3>
+        {% else %}
+          <h3><a style="margin: 0 auto;" class="disabled link link--mallki" href="#" title="No more new posts">No more new posts &rarr;<span data-letters="&larr; No more new posts"></span><span data-letters="&larr; No more new posts"></span></a></h3>
+        {% endif %}
+    </div></div></div>
+<div class="container">
 
     <hr>
       <div class="container">
