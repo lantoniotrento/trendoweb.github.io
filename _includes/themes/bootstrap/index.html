@@ -1,8 +1,9 @@
 {% include themes/bootstrap/nav-bar.html %}
-<div style="margin-top: 2em;" class="container">
-<h1>{{ page.title }}</h1>{% if page.tagline %}
-<p class="subline">{{ page.tagline }}</p>{% endif %}
 
+<div class="col-lg-8 col-md-7 col-sm-6">
+  <h1>{{ page.title }}</h1>{% if page.tagline %}
+  <p class="lead">{ page.tagline }}</p>{% endif %}
+</div>
 
     {{ content }}
 
