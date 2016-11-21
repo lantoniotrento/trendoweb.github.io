@@ -144,11 +144,11 @@ body {
   width:100%;
   height:100%;
   height:calc(100% - 1px);
-  background-size:cover;
+  background-size: 100% auto;
 }
 
 .wide-mobile img {
-  width:100%; 
+  width:100%;
 }
     .wide {
       display: none;
