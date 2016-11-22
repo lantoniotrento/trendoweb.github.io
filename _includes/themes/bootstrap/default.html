@@ -16,6 +16,16 @@
 		<![endif]-->
     <link href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
     <link href="{{ BASE_PATH }}{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+    <!-- Google ADS mobile block -->
+    {% if site.google_ad_client %}
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "{{ site.google_ad_client }}",
+        enable_page_level_ads: true
+        });
+    </script>
+    {% endif %}
   </head>
   <body>
       {{ content }}
