@@ -90,7 +90,7 @@ JB :
   comments :
     provider : disqus
     disqus :
-      short_name : getshjtdone
+      short_name : jekymat
     livefyre :
       site_id : 123
     intensedebate :
