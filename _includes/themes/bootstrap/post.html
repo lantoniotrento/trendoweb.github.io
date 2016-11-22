@@ -62,9 +62,9 @@
               </li>
             </ul>
     </div>
-    <div class="col-md-4 text-center">
 
-      
+
+    <div class="col-md-4" style="display: table; margin: 0 auto;">      
       {% unless page.categories == empty %}
       <p class="lead">
             <a href="{{ BASE_PATH }}/categories" style="color:black"><i class="fa fa-archive"></i></a>   | {{page.categories | array_to_sentence_string}}
