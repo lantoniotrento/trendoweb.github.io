@@ -37,53 +37,55 @@
 
       {{ content }}
 
+      <div class="row">
+    <div class="col-md-4">
+            <ul class="social-nav model-4">
+              <li><a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" class="google-plus" rel="nofollow" target="_blank" title="Share on Google plus"><i class="fa fa-google-plus"></i></a></li>
+              <li><a href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}&title={{ page.title }}%20{{ page.description }}&source=LinkedIn" rel="nofollow" target="_blank" title="Share on LinkedIn" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
+              <li><a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}&via={{ site.twitter_username }}&related={{ site.twitter_username }}" class="twitter" rel="nofollow" target="_blank" title="Share on Twitter"><i class="fa fa-twitter"></i></a></li>
+              <li>
+                <a href="https://facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" class="facebook" rel="nofollow" target="_blank" title="Share on Facebook"> <i class="fa fa-facebook"></i></a>
+              </li>
+            </ul>
+    </div>
+    <div class="col-md-4 text-center">
 
-    {% unless page.categories == empty %}
-    <br>
-    <h4>Categories</h4>
+      <br>
+      {% unless page.categories == empty %}
+      <p class="lead">
+            <a href="{{ BASE_PATH }}/categories" style="color:black"><i class="fa fa-archive"></i></a>   | {{page.categories | array_to_sentence_string}}
+      </p>
+      {% endunless %}
+    </div>
+    <div class="col-md-4 text-center">
+      {% unless page.tags == empty %}
+      <p class="lead">
+            <a href="{{ BASE_PATH }}/tags" style="color:black"><i class="fa fa-tags"></i></a>   | {{page.tags | array_to_sentence_string}}
+      </p>
+      {% endunless %}
+    </div>
+  </div>
+      <hr>
+
+
       <ul class="nav nav-pills">
-	      <!-- <li><i class="icon-folder-open"></i></li> -->
-        {% assign categories_list = page.categories %}
-        {% include JB/categories_list %}
-      </ul>
-    {% endunless %}
-
-    {% unless page.tags == empty %}
-    <h4>Tags</h4>
-      <ul class="nav nav-pills">
-	      <!-- <li><i class="icon-tags"></i></li> -->
-        {% assign tags_list = page.tags %}
-        {% include JB/tags_list %}
-      </ul>
-    {% endunless %}
-
-</div>
-<hr>
-  <div class="container-fluid">
-    <div class="row">
-      <div onclick="location.href='{% if page.previous.url %}{{ BASE_PATH }}{{ page.previous.url }}{% else %}#{% endif %}';" style="text-align: center; vertical-align: middle; line-height: 350px; background-image:url('{{ BASE_PATH }}/assets/img/{% if page.previous.img %}{{ page.previous.img }}{% else %}no-post.jpg{% endif %}'); background-repeat:no-repeat; background-size:100% auto; height:350px; max-width: 100%;" class="col-md-6">
         {% if page.previous %}
-          <h3><a style="margin: 0 auto;" class="link link--mallki" href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; {{ page.previous.title }}<span data-letters="&larr; {{ page.previous.title }}"></span><span data-letters="&larr; {{ page.previous.title }}"></span></a></h3>
+          <li class="prev"><a class="btn btn-info btn-fill" href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&laquo; Previous</a></li>
         {% else %}
-          <h3><a style="margin: 0 auto;" class="disabled link link--mallki" href="#" title="No more old posts">&larr; No more old posts<span data-letters="&larr; No more old posts"></span><span data-letters="&larr; No more old posts"></span></a></h3>
+          <li class="prev disabled"><a>&laquo; Previous</a></li>
         {% endif %}
-      </div>
-      <div onclick="location.href='{% if page.next.url %}{{ BASE_PATH }}{{ page.next.url }}{% else %}#{% endif %}';" style="text-align: center; vertical-align: middle; line-height: 350px; background-image:url('{{ BASE_PATH }}/assets/img/{% if page.next.img %}{{ page.next.img }}{% else %}no-post.jpg{% endif %}'); background-repeat:no-repeat; background-size:100% auto; height:350px; max-width: 100%;" class="col-md-6">
+          <li><a class="btn btn-info btn-fill" href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a></li>
         {% if page.next %}
-          <h3><a style="margin: 0 auto;" class="link link--mallki" href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">{{ page.next.title }} &rarr;<span data-letters="{{ page.next.title }} &rarr;"></span><span data-letters="{{ page.next.title }} &rarr;"></span></a></h3>
+          <li class="next"><a class="btn btn-info btn-fill" href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &raquo;</a></li>
         {% else %}
-          <h3><a style="margin: 0 auto;" class="disabled link link--mallki" href="#" title="No more new posts">No more new posts &rarr;<span data-letters="&larr; No more new posts"></span><span data-letters="&larr; No more new posts"></span></a></h3>
+          <li class="next disabled"><a>Next &raquo;</a></li>
         {% endif %}
-    </div></div></div>
-<div class="container">
+      </ul>
+      <hr>
 
-    <hr>
-      <div class="container">
-    <ul class="pagination">
+      <div><h2>We <a><i class="fa fa-heart heart"></i></a><---  New Opinions <small class="subtitle">Leave us a comment or a question</small>
+      </h2></div>
 
-        <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a></li>
-
-    </ul>
 
     {% include JB/comments %}
 </div>
