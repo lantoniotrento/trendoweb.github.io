@@ -161,7 +161,7 @@ body {
 .social-nav {
  padding: 0;
  list-style: none;
- display: inline-block;
+ display: inline-block !important;
  margin: 10px auto;
 }
 .social-nav li {
