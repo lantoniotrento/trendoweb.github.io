@@ -83,20 +83,14 @@
 
 <div class="row"><div class="col-md-4"></div>
     <div class="col-md-4 text-center"  style="display: table; margin: 0 auto;">
-      <a class="btn btn-warning" href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&laquo; Previous</a><a class="btn btn-warning" href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a><a class="btn btn-warning" href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &raquo;</a>
-      <ul class="nav nav-pills">
-        {% if page.previous %}
-          <li class="prev"><a class="btn btn-warning" href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&laquo; Previous</a></li>
-        {% else %}
-          <li class="prev disabled"><a>&laquo; Previous</a></li>
-        {% endif %}
-          <li><a class="btn btn-warning" href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a></li>
-        {% if page.next %}
-          <li class="next"><a class="btn btn-warning" href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &raquo;</a></li>
-        {% else %}
-          <li class="next disabled"><a>Next &raquo;</a></li>
-        {% endif %}
-      </ul>
+      {% if page.previous %}
+      <a class="btn btn-warning" href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&laquo; Previous</a>
+      {% else %}<a class="prev disabled">&laquo; Previous</a>{% endif %}
+      <a class="btn btn-warning" href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a>
+      {% if page.next %}
+      <a class="btn btn-warning" href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &raquo;</a>
+      {% else %}<a class="next disabled">Next &raquo;</a>{% endif %}
+      
 
     </div>
     <div class="col-md-4"></div></div>
