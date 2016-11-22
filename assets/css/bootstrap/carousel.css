@@ -166,7 +166,7 @@ body {
 }
 
 #cloud div {
-    border: solid 5px black;
+    border: solid 5px black !important;
 }
 
 #bottom_c {
