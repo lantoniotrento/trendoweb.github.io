@@ -165,10 +165,10 @@ body {
  margin: 10px auto;
 }
 .social-nav li {
- display: inline-block;
+ display: inline-block !important;
 }
 .social-nav a {
- display: inline-block;
+ display: inline-block !important;
  float: left;
  width: 48px;
  height: 48px;
