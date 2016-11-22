@@ -103,7 +103,21 @@
 
 
       <div class="col-md-12 text-center"><h2>We <a><i class="fa fa-heart heart"></i></a><---  New Opinions <small class="subtitle">Leave us a comment or a question</small>
-      </h2></div>
+      </h2>
+      <ul class="nav nav-pills">
+        {% if page.previous %}
+          <li class="prev"><a class="btn btn-primary" href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&laquo; Previous</a></li>
+        {% else %}
+          <li class="prev disabled"><a>&laquo; Previous</a></li>
+        {% endif %}
+          <li><a class="btn btn-primary" href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a></li>
+        {% if page.next %}
+          <li class="next"><a class="btn btn-primary" href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &raquo;</a></li>
+        {% else %}
+          <li class="next disabled"><a>Next &raquo;</a></li>
+        {% endif %}
+      </ul>
+    </div>
 
 
     {% include JB/comments %}
