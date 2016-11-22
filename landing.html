@@ -11,7 +11,8 @@ img-mobile : 4-mobile.jpg
 {% include themes/bootstrap/nav-bar.html %}
 
   <div class="wide" style="background-image:url('{{ BASE_PATH }}/assets/img/{% if page.img %}{{ page.img }}{% else %}7.jpg{% endif %}')">
-    <div class="row featurette container">
+    <div class="row featurette">
+      <div class="container">
       <div class="col-md-6" style="margin-top: 5em">
           <section class="relateds" style="background: rgba(0, 0, 0, 0.5);">
           <h1 id="navs" style="color:white">{{ page.title }}{% if page.tagline %} <br><small class="subtitle">{{ page.tagline }}</small>{% endif %}</h1>
@@ -21,7 +22,7 @@ img-mobile : 4-mobile.jpg
         <section class="relateds" style="background: rgba(0, 0, 0, 0.5);">
         <h2 style="color:white">On big screens<br><small class="subtitle">You can add a message or image</small></h2>
         </section>
-      </div>
+      </div></div>
     </div>
   </div>
   <div class="container">
