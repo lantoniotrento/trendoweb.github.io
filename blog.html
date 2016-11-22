@@ -17,7 +17,11 @@ img-mobile : 2-mobile.jpg
     </div>
   </div>
 </div>
-<div class="container">
+
+<div class="row">
+
+  <div class="col-md-8">
+
 <!-- Change the "about information" contained in /_includes/themes/bootstrap/index.html  -->
 
   {% for post in site.posts %}
@@ -40,4 +44,6 @@ img-mobile : 2-mobile.jpg
                 <hr>
 
   {% endfor %}
+  </div>
+  <div class="col-md-4">{% include side-bar.html %}</div>
 </div>
