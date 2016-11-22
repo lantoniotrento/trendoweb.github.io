@@ -83,7 +83,7 @@
 
 <div class="row"><div class="col-md-4"></div>
     <div class="col-md-4 text-center"  style="display: table; margin: 0 auto;">
-      <a class="btn btn-warning" href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&laquo; Previous</a>
+      <a class="btn btn-warning" href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&laquo; Previous</a><a class="btn btn-warning" href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a><a class="btn btn-warning" href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &raquo;</a>
       <ul class="nav nav-pills">
         {% if page.previous %}
           <li class="prev"><a class="btn btn-warning" href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&laquo; Previous</a></li>
