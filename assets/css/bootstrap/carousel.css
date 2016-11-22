@@ -154,15 +154,3 @@ body {
       display: none;
     }
 }
-
-#floater {
-    float: left;
-    height: 50%;
-    width: 100%;
-    margin-bottom: -50px;
-}
-
-#child {
-    clear: both;
-    height: 100px;
-}
